@@ -15,12 +15,13 @@ class ColorPickView extends StatefulWidget {
   final SelectColor selectColorCallBack;
 
   ColorPickView(
-      {this.size,
+      {Key key,
+      this.size,
       this.selectColorCallBack,
       this.selectRadius,
       this.padding,
       this.selectRingColor,
-      this.selectColor}) {
+      this.selectColor}) : super(key: key) {
     assert(size == null || (size != null), '控件宽度太宽');
     assert(size == null || (size != null && size.height == size.width),
         '控件宽高必须相等');
